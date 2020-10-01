@@ -147,7 +147,7 @@ namespace UMSExcel
                     Marshal.ReleaseComObject(ExcelWorkBook);
                     Marshal.ReleaseComObject(ExcelExport);
 
-                    System.Diagnostics.Debug.WriteLine("Excel Document was not created.");
+                    /*System.Diagnostics.Debug.WriteLine("Excel Document was not created.");*/
                     sqlCommandDel.ExecuteReader();
                     sqlConnection.Close();
                     /*return RedirectToAction("Index", new { a = "Excel Document was not created.", color = "red", emailStatus = isEmailSend });*/
