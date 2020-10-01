@@ -134,6 +134,7 @@ namespace UMSExcel
                     Marshal.ReleaseComObject(ExcelExport);
                     sqlCommandDel.ExecuteReader();
                     sqlConnection.Close();
+                    Environment.Exit(0);
                     /*return RedirectToAction("Index", new { a = "Excel Document was created sucessfully and it should be available in your Documents folder.", color = "green", emailStatus = isEmailSend });*/
                 }
                 catch
@@ -151,11 +152,12 @@ namespace UMSExcel
                     sqlCommandDel.ExecuteReader();
                     sqlConnection.Close();
                     /*return RedirectToAction("Index", new { a = "Excel Document was not created.", color = "red", emailStatus = isEmailSend });*/
-
+                    Environment.Exit(0);
                 }
             }
 
             }
+
     }
 }
 
